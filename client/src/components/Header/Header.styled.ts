@@ -14,13 +14,26 @@ export const SHeaderWrapper = styled.div`
     align-items: center;
 `
 
-export const SHeaderButton = styled.button`
-    background: #2C82E7;
-    color: #fff;
-    font-size: 20px;
+
+
+export const SModalWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    
+    margin: 0 20px 40px 20px;
+`
+
+export const SModalContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+    width: 360px;
+`
+
+export const STitle = styled.h3`
+    font-size: 24px;
     font-weight: 600;
-    line-height: 20px;
-    border-radius: 10px;
-    padding: 9px 19px;
-    text-align: center;
+    color: #05203E;
 `

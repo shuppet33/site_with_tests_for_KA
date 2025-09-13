@@ -35,7 +35,6 @@ export const SModalTitle = styled.h3`
     font-size: 24px;
     font-weight: 600;
 `
-
 export const SInputWrapper = styled.div`
     input {
         border-radius: 8px;
@@ -50,7 +49,6 @@ export const SInputWrapper = styled.div`
         }
     }
 `
-
 export const SModalButton = styled.button`
     background: #1E71E8;
     color: #fff;
@@ -66,24 +64,6 @@ function App() {
 
     return (
         <>
-
-            {/*<SModalOverlay>*/}
-            {/*    <SModalWrapper>*/}
-
-            {/*        <SModalTitle>Вход</SModalTitle>*/}
-
-            {/*        <SInputWrapper>*/}
-            {/*            <input type="text" placeholder={'Логин'}/>*/}
-            {/*        </SInputWrapper>*/}
-
-            {/*        <SInputWrapper>*/}
-            {/*            <input type="text" placeholder={'Пароль'}/>*/}
-            {/*        </SInputWrapper>*/}
-
-            {/*        <SModalButton> Войти </SModalButton>*/}
-            {/*    </SModalWrapper>*/}
-            {/*</SModalOverlay>*/}
-
             <Header />
 
             <Container>

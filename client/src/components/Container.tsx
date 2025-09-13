@@ -1,4 +1,11 @@
 import styled from "styled-components";
+import type {ReactNode} from "react";
+
+type TypeContainer = {
+    children: ReactNode,
+}
+
+
 
 const SContainer = styled.div`
     max-width: 1184px;
@@ -7,6 +14,6 @@ const SContainer = styled.div`
     padding: 0 5px;
 `
 
-export const Container = ({children}) => {
+export const Container = ({children}: TypeContainer) => {
     return <SContainer>{children}</SContainer>
 }
