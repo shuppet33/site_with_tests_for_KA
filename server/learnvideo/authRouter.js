@@ -1,4 +1,3 @@
-
 import {UsersDB} from "./models/db.js";
 import {Router} from "express";
 import bcrypt from "bcryptjs";
@@ -67,9 +66,12 @@ router.post('/login', (req, res) => {
         res.status(400).json({message:"login failed"});
     }
 })
+
 router.post('/logout', (req, res) => {
+    res.clearCookie("token");
     res.status(200).json({ message: "Logged out" });
 });
+
 
 router.get('/getusers', async function (req, res) {
     res.json(UsersDB)
