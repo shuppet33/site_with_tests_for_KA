@@ -44,13 +44,31 @@ const SContainer = styled.div<{ $position?: 'center' | 'right' }>`
 export const SModal = styled.div<{ $marginTop?: string }>`
     position: fixed;
     z-index: 1000;
-    
+
     background: #fff;
     border-radius: 10px;
     padding: 20px;
-    
+
     margin-top: ${({$marginTop}) => $marginTop ? $marginTop : '0'};
-    
+
+
+    input {
+        border: 2px solid #DEE7F0;
+        padding: 18px 20px;
+        border-radius: 10px;
+
+        width: 100%;
+
+        &::placeholder {
+            color: #DEE7F0;
+        }
+        
+
+        &.error {
+            border: 2px solid #dc9b9b;
+        }
+    }
+
 `
 
 const SCloseButtonWrapper = styled.div`

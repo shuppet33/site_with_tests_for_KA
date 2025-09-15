@@ -4,6 +4,7 @@ import styled from "styled-components";
 type TypeButton = {
     children?: ReactNode,
     $fullWidth?: boolean,
+    type?: 'submit',
     $size?: string,
     onClick?: () => void,
 }

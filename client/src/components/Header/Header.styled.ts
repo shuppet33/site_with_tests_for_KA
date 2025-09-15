@@ -9,6 +9,7 @@ export const SHeader = styled.div`
 `
 export const SHeaderWrapper = styled.div`
     padding: 10px 0;
+    gap: 10px;
     display: flex;
     justify-content: end;
     align-items: center;
@@ -24,12 +25,14 @@ export const SModalWrapper = styled.div`
 `
 
 export const SModalContent = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    
-    width: 360px;
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        width: 360px;   
+    }
 `
 
 export const STitle = styled.h3`
