@@ -9,7 +9,6 @@ type LoginResponse = {
     token: TokenType | null;
 };
 
-// вынести типы
 
 
 export const loginAPI = async (data: FieldValues): Promise<LoginResponse> => {
