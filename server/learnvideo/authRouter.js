@@ -31,9 +31,9 @@ router.post('/register', (req, res) => {
         const candidat = UsersDB.find((item) => item.username === username)
 
         if (candidat) {
-
             res.status(400).json(candidat);
         }
+
         const hashedpassword = bcrypt.hashSync(password, 10);
         const userId = uuidv7();
         const user = {id: userId, username: username, password: hashedpassword, role: role};
@@ -55,6 +55,8 @@ router.post('/login', (req, res) => {
             return res.status(400).json({message: `user с таким ником (${user}) не найден}`})
         }
         const validPassword = bcrypt.compareSync(password,user.password);
+        console.log('validp ', validPassword);
+
         if (!validPassword) {
             return res.status(400).json({message: "password incorrect"})
         }
@@ -68,7 +70,7 @@ router.post('/login', (req, res) => {
 })
 
 router.post('/logout', (req, res) => {
-    res.clearCookie("token");
+    res.clearCookie("Authorization");
     res.status(200).json({ message: "Logged out" });
 });
 
