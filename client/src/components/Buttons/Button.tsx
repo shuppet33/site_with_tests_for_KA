@@ -5,7 +5,7 @@ type TypeButton = {
     children?: ReactNode,
     $fullWidth?: boolean,
     type?: 'submit',
-    $size?: string,
+    $size?: 'small' | 'medium' | 'large',
     onClick?: () => void,
 }
 

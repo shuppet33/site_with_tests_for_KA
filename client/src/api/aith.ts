@@ -1,10 +1,29 @@
+import axios from "axios";
 import type {FieldValues} from "react-hook-form";
+import type {RoleType, TokenType} from "../types/types.ts";
 
 
-export const login = (data: FieldValues) => {
-    if (data?.login === 'admin' && data?.password === '1234') {
-        return {success: true, role: 'admin', token: 'abcd'}
+type LoginResponse = {
+    success: boolean;
+    role: RoleType | null;
+    token: TokenType | null;
+};
+
+
+export const loginAPI = async (data: FieldValues): Promise<LoginResponse> => {
+    try {
+        const res = await axios.post("http://localhost:8080/auth/login", {
+            login: data.login,
+            password: data.password,
+        });
+
+        return {
+            success: true,
+            role: res.data.role,
+            token: res.data.token,
+        };
+    } catch (e) {
+        console.error("Ошибка запроса:", e);
+        return { success: false, role: null, token: null };
     }
-
-    return {success: false}
-}
+};

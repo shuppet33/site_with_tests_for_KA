@@ -43,7 +43,7 @@ const SContainer = styled.div<{ $position?: 'center' | 'right' }>`
 
 export const SModal = styled.div<{ $marginTop?: string }>`
     position: fixed;
-    z-index: 1000;
+    z-index: 20;
 
     background: #fff;
     border-radius: 10px;
